@@ -24,12 +24,17 @@ target_link_libraries(image_saver ${catkin_LIBRARIES}
                                   ${OpenCV_LIBRARIES}
 )
 
+add_executable(depth_image_saver src/nodes/depth_image_saver.cpp)
+target_link_libraries(depth_image_saver ${catkin_LIBRARIES}
+                                  ${OpenCV_LIBRARIES}
+)
+
 add_executable(video_recorder src/nodes/video_recorder.cpp)
 target_link_libraries(video_recorder ${catkin_LIBRARIES}
                                      ${OpenCV_LIBRARIES}
 )
 
-install(TARGETS extract_images image_saver video_recorder
+install(TARGETS extract_images image_saver video_recorder depth_image_saver
         DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
