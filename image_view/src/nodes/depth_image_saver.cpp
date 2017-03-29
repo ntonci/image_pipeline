@@ -183,7 +183,7 @@ class Callbacks {
         if (cv::imwrite(filename, image)) {
           ROS_INFO("Saved image %s", filename.c_str());
         } else {
-          ROS_INFO("Could not save image %s", filename.c_str())
+          ROS_INFO("Could not save image %s", filename.c_str());
         }
         save_image_service = false;
       } else {
